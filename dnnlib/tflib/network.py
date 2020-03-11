@@ -404,6 +404,7 @@ class Network:
                 if custom_inputs is not None:
                     with tf.device("/gpu:0"):
                         in_expr = [input_builder(name) for input_builder, name in zip(custom_inputs, self.input_names)]
+                        #in_expr = [tf.get_variable('learnable_dlatents', shape=(1, 18, 512), dtype='float32', initializer=tf.initializers.random_normal())]
                         in_split = list(zip(*[tf.split(x, num_gpus) for x in in_expr]))
                 else:
                     with tf.device("/cpu:0"):

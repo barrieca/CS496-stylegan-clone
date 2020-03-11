@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+    <title>Face Styler</title>
+</head>
+<body>
+    <form action="." method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Upload Image
+        <input type="file" name="image_file" id="image_file">
+        <input type="submit" value="Upload" name="submit">
+    </form>
+
+    {% if file_name %}
+        <br /><br /><br /><br /><br />
+        <img src="media/{{ file_name }}" width="1000px" />
+    {% else %}
+        <br />Note that image conversion can take as much as 5 minutes. Please be patient.
+    {% endif %}
+</body>
+</html>
