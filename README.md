@@ -1,3 +1,20 @@
+## Stylegan Encoder Web Interface
+
+This repository extends [Nvidia's stylegan](https://github.com/NVlabs/stylegan) and [Puzer's stylegan encoder](https://github.com/Puzer/stylegan-encoder) by including an interface whereby users may upload their
+own photos, which are then aligned, passed through the stylegan encoder, mixed with the styles of other images (see
+image below). ![The Flow](./flow.png) The
+resulting style mix image is then displayed back in the web page interface. In other words, the input of the system is
+the user's uploaded image and the output is the style-mixed image, which includes the a learned latent space representation
+of the user's uploaded image, a set of predifined images from which style will be transferred and that already exist in the stylegan training set, and the style mixing results (see image below).
+
+![Style mixing of me](./website/media/me_style_mix.png)
+
+The docker image for running this in a container is located at hub.docker.com/repository/barrieca/stylegan-encoder
+
+This repository also contains quickstart instructions for running the docker image.
+
+### Stylegan Encoder Readme (added by "Puzer"):
+
 ## StyleGAN &mdash; Encoder for Official TensorFlow Implementation
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
 ![TensorFlow 1.10](https://img.shields.io/badge/tensorflow-1.10-green.svg?style=plastic)
@@ -34,7 +51,7 @@ Feel free to join the research. There is still much room for improvement:
 
 Stay tuned!
 
-### Original Readme:
+### Original Stylegan Readme:
 This repository contains (no longer) official TensorFlow implementation of the following paper:
 
 

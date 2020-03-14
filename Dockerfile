@@ -12,9 +12,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update \
- && apt-get install -y python3-pip python3-dev \
+ && apt-get install -y python3-pip python3.6-dev \
  && cd /usr/local/bin \
- && ln -s /usr/bin/python3 python \
+ && ln -s /usr/bin/python3.6 python \
  && pip3 install --upgrade pip \
  && apt-get install -y build-essential cmake \
  && apt-get install -y libgtk-3-dev \
@@ -28,6 +28,6 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 8000
 
-CMD python align_images.py raw_images aligned_images
+CMD python website/manage.py runserver 0.0.0.0:8000
 
 COPY . .

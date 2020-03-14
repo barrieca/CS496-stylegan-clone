@@ -10,7 +10,7 @@ import sys
 # ----------------------------------------------------------------------------
 # Helpers for loading and using pre-trained generators.
 
-url_ffhq = 'cache/karras2019stylegan-ffhq-1024x1024.pkl'  # 'https://drive.google.com/uc?id=1MEGjdvVpUsu1jB4zrXZN7Y4kBBOzizDQ'
+url_ffhq = 'https://drive.google.com/uc?id=1MEGjdvVpUsu1jB4zrXZN7Y4kBBOzizDQ' # 'cache/karras2019stylegan-ffhq-1024x1024.pkl'
 #url_celebahq = 'karras2019stylegan-celebahq-1024x1024.pkl'  # 'https://drive.google.com/uc?id=1MGqJl28pN4t7SAtSrPdSRJSQJqahkzUf'
 
 synthesis_kwargs = dict(output_transform=dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True), minibatch_size=8)
@@ -20,8 +20,8 @@ _Gs_cache = dict()
 
 def load_Gs(url):
     if url not in _Gs_cache:
-        # with dnnlib.util.open_url(url, cache_dir=config.cache_dir) as f:
-        with open(url, 'rb') as f:
+        with dnnlib.util.open_url(url, cache_dir=config.cache_dir) as f:
+        # with open(url, 'rb') as f:
             _G, _D, Gs = pickle.load(f)
         _Gs_cache[url] = Gs
     return _Gs_cache[url]

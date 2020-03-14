@@ -2,3 +2,7 @@
 *.jpeg
 *.jpg
 *.npy
+queued_images/
+saved_generated/
+cache/
+image_to_latent_code.py
