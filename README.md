@@ -16,6 +16,12 @@ The docker image for running this in a container is located at [hub.docker.com/r
 
 This repository also contains quickstart instructions for running the docker image.
 
+The document "StyleGan Encoder Interface.pdf" describes the problem and soluction defining the project.
+
+The two .pptx files in this directory are the two sets of presentation slides I used during my presentations.
+
+------- End of readme new readme documentation for Northwestern University Advanced Topics in AI Course -------
+
 ### Stylegan Encoder Readme (added by "Puzer"):
 
 ## StyleGAN &mdash; Encoder for Official TensorFlow Implementation
