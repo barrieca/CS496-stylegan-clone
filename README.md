@@ -12,8 +12,7 @@ of the user's uploaded image, a set of predifined images from which style will b
 
 ![Style mixing of me](./website/media/me_style_mix.png)
 
-The docker image for running this in a container is located at [hub.docker.com/repository/barrieca/stylegan-encoder](hub.docker.com/repository/barrieca/stylegan-encoder)
-
+The docker image for running this in a container is located at [hub.docker.com/repository/barrieca/stylegan-encoder](hub.docker.com/repository/barrieca/stylegan-encoder).
 This repository also contains quickstart instructions for running the docker image.
 
 The document "StyleGan Encoder Interface.pdf" describes the problem and soluction defining the project.
