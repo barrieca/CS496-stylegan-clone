@@ -1,6 +1,4 @@
-*.png
-*.jpeg
-*.jpg
+generated_images/
 *.npy
 queued_images/
 saved_generated/
